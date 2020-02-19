@@ -1,9 +1,7 @@
 package ru.nukkitx.forms.elements;
 
-import cn.nukkit.Player;
 import cn.nukkit.form.element.*;
 import cn.nukkit.form.window.FormWindowCustom;
-import ru.nukkitx.forms.CustomFormResponse;
 import ru.nukkitx.forms.Form;
 
 import java.util.List;
@@ -20,12 +18,6 @@ public class CustomForm extends Form {
 
     public CustomForm(String title) {
         form = new FormWindowCustom(title);
-    }
-
-    public void send(Player player, CustomFormResponse response){
-        playersForm.put(player.getName(), response);
-        paramsForm.put(player.getName(), null);
-        player.showFormWindow(form);
     }
 
     public CustomForm setTitle(String value) {

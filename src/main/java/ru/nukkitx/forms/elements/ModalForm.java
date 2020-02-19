@@ -1,9 +1,7 @@
 package ru.nukkitx.forms.elements;
 
-import cn.nukkit.Player;
 import cn.nukkit.form.window.FormWindowModal;
 import ru.nukkitx.forms.Form;
-import ru.nukkitx.forms.ModalFormResponse;
 
 public class ModalForm extends Form {
 
@@ -29,12 +27,6 @@ public class ModalForm extends Form {
 
     public ModalForm(String title, String content, String trueButton, String falseButton) {
         form = new FormWindowModal(title, content, trueButton, falseButton);
-    }
-
-    public void send(Player player, ModalFormResponse response){
-        playersForm.put(player.getName(), response);
-        paramsForm.put(player.getName(), null);
-        player.showFormWindow(form);
     }
 
     public ModalForm setTitle(String value) {
